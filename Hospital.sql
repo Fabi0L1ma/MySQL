@@ -3,7 +3,7 @@ create database hospital;
 use hospital;
 
 create table medico(
-	CRM int not null,
+    CRM int not null,
     NOME varchar(255),
     TELEFONE_CELULAR varchar(255),
     ESPECIALIDADE varchar(255),
@@ -12,7 +12,7 @@ create table medico(
 );
 
 create table mae(
-	COD_MAE int not null auto_increment,
+    COD_MAE int not null auto_increment,
     NOME varchar(255),
     ENDERECO varchar(255),
     DATA_NASCIMENTO date,
@@ -21,7 +21,7 @@ create table mae(
 );
 
 create table bebe(
-	COD_CRIANCA int not null auto_increment,
+    COD_CRIANCA int not null auto_increment,
     NOME varchar(255),
     DATA_NASCIMENTO date,
     PESO float,
