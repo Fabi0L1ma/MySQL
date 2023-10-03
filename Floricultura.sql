@@ -33,6 +33,8 @@ create table venda(
     references produto(COD_PROD)
 );
 
+
+
 /* TABELA CLIENTE*/
 
 insert into cliente(RG, NOME, TELEFONE, ENDERECO)
@@ -93,11 +95,21 @@ delete from produto
     
 select * from produto;
 
+
+
 /*TABELA VENDA*/
 
+insert into venda(COD_RG, ID_PRODUTO, DATA_VENDA, VALOR_VENDA, QTD_VENDA)
+	value(129420311, 2, '2023:10:03', 50.98, 2);
+    
+insert into venda(COD_RG, ID_PRODUTO, DATA_VENDA, VALOR_VENDA, QTD_VENDA)
+	value(129420311, 2, '2024:10:15', 25.49, 1);
+    
+update venda
+	set DATA_VENDA = '2023:10:02'
+    where COD_VENDA = 2;
 
-
-
-
-
-
+delete from venda
+	where COD_VENDA = 1;
+    
+select * from venda;
